@@ -4,13 +4,11 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/form">
 
 
     <EditText
@@ -20,7 +18,7 @@
         android:hint="Email"
         android:layout_marginTop="20dp"
         android:textSize="16dp"
-        android:textColorHint="#ADCCE2"
+        android:textColorHint="@color/colorButton"
         android:textColor="#ADCCE2"
         android:layout_marginLeft="22dp"
         android:inputType="text"
@@ -33,14 +31,14 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_height="1dp"
-        android:background="#ADCCE2"/>
+        android:background="@color/colorButton"/>
     <EditText
         android:id="@+id/pswrd"
         android:textSize="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:textColorHint="#ADCCE2"
+        android:textColorHint="@color/colorButton"
         android:layout_marginLeft="22dp"
         android:inputType="textPassword"
         android:textColor="#ADCCE2"
@@ -55,12 +53,12 @@
         android:layout_marginRight="40dp"
         android:layout_height="1dp"
         android:layout_marginBottom="10dp"
-        android:background="#ADCCE2"/>
+        android:background="@color/colorButton"/>
     <Button
         android:id="@+id/sin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/angle"
+        android:background="@color/colorButton"
         android:text="Sign In"
         android:textSize="16dp"
         android:textColor="#fff"
@@ -81,7 +79,7 @@
         android:textSize="15sp"
         android:text="Don't have an account? Sign up here!"
         android:id="@+id/registerTextView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
     <TextView
@@ -91,7 +89,20 @@
         android:textColor="@android:color/black"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:id="@+id/login"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/form"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/ngamia3"/>
+
 
 </RelativeLayout>

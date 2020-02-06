@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Ngamia</string>
+
+
+    <string-array name="insurance">
+        <item>Vehicle</item>
+        <item>Personal</item>
+    </string-array>
+
+    <string-array name="sacco">
+        <item>Sacco 1</item>
+        <item>Sacco 2</item>
+
+    </string-array>
+
+
 </resources>

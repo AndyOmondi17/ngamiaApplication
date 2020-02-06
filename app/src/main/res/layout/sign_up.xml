@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
-
+        android:layout_alignParentBottom="true"
+        android:id="@+id/form">
 
 
         <EditText
-            android:textSize="16dp"
             android:id="@+id/sname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Surname"
-            android:textColorHint="#ADCCE2"
-            android:textColor="#ADCCE2"
             android:layout_marginLeft="22dp"
-            android:inputType="text"
+            android:layout_marginRight="35dp"
             android:background="#0000"
+            android:hint="Surname"
+            android:inputType="text"
             android:padding="16dp"
-            android:layout_marginRight="35dp"/>
+            android:textColor="#ADCCE2"
+            android:textColorHint="@color/colorButton"
+            android:textSize="16dp"/>
+
         <View
             android:layout_width="match_parent"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_height="1dp"
-            android:background="#ADCCE2" />
+            android:background="@color/colorButton" />
+
         <EditText
             android:textSize="16dp"
             android:id="@+id/mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Firstname"
-            android:textColorHint="#ADCCE2"
+            android:textColorHint="@color/colorButton"
             android:textColor="#ADCCE2"
             android:layout_marginLeft="22dp"
             android:inputType="text"
@@ -48,14 +51,14 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_height="1dp"
-            android:background="#ADCCE2"/>
+            android:background="@color/colorButton"/>
         <EditText
             android:textSize="16dp"
             android:id="@+id/usrusr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Identification Number"
-            android:textColorHint="#ADCCE2"
+            android:textColorHint="@color/colorButton"
             android:textColor="#ADCCE2"
             android:layout_marginLeft="22dp"
             android:inputType="text"
@@ -67,14 +70,14 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_height="1dp"
-            android:background="#ADCCE2" />
+            android:background="@color/colorButton" />
         <EditText
             android:textSize="16dp"
             android:id="@+id/pswrd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:textColorHint="#ADCCE2"
+            android:textColorHint="@color/colorButton"
             android:layout_marginLeft="22dp"
             android:inputType="textPassword"
             android:maxLength="12"
@@ -88,7 +91,7 @@
             android:layout_marginRight="40dp"
             android:layout_height="1dp"
             android:layout_marginBottom="10dp"
-            android:background="#ADCCE2"/>
+            android:background="@color/colorButton"/>
 
         <Button
             android:id="@+id/sin"
@@ -104,13 +107,13 @@
             android:padding="16dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="28dp"
-            android:layout_marginTop="32dp" />
+            android:layout_marginTop="32dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="#000"
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Already have an account? Log in here!"
@@ -125,7 +128,19 @@
         android:textColor="@android:color/black"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:id="@+id/create"
         android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/form"
+        android:layout_below="@+id/create"
+        android:layout_marginTop="-3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/ngamia3"/>
 
 </RelativeLayout>
