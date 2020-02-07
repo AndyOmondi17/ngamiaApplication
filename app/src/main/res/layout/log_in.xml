@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,10 +13,10 @@
 
 
     <EditText
-        android:id="@+id/usrusr"
+        android:id="@+id/userid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="Id number"
         android:layout_marginTop="20dp"
         android:textSize="16dp"
         android:textColorHint="@color/colorButton"
@@ -33,7 +34,7 @@
         android:layout_height="1dp"
         android:background="@color/colorButton"/>
     <EditText
-        android:id="@+id/pswrd"
+        android:id="@+id/pswrdL"
         android:textSize="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +56,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/colorButton"/>
     <Button
-        android:id="@+id/sin"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorButton"

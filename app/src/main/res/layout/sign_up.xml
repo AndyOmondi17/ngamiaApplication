@@ -13,7 +13,7 @@
 
 
         <EditText
-            android:id="@+id/sname"
+            android:id="@+id/surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
@@ -35,7 +35,7 @@
 
         <EditText
             android:textSize="16dp"
-            android:id="@+id/mail"
+            android:id="@+id/firstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Firstname"
@@ -54,7 +54,7 @@
             android:background="@color/colorButton"/>
         <EditText
             android:textSize="16dp"
-            android:id="@+id/usrusr"
+            android:id="@+id/idno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Identification Number"
@@ -94,7 +94,7 @@
             android:background="@color/colorButton"/>
 
         <Button
-            android:id="@+id/sin"
+            android:id="@+id/createButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorButton"
