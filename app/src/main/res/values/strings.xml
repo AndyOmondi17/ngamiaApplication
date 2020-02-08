@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Ngamia</string>
+    <string name="invalid_password">Kindly enter a valid password.</string>
+    <string name="invalid_confirmpassword">Ensure your password matches the confirm password.</string>
+    <string name="invalid_idno">Enter a valid idno</string>
+    <string name="invalid_name">Enter a valid name</string>
 
 
     <string-array name="insurance">

@@ -25,6 +25,7 @@
         android:inputType="text"
         android:background="#0000"
         android:padding="16dp"
+        android:maxLength="8"
         android:drawableRight="@drawable/user"
         android:layout_marginRight="35dp"/>
     <View
