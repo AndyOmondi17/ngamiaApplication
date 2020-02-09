@@ -17,8 +17,9 @@ import butterknife.ButterKnife;
 public class log_in extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.userid) EditText mUserIdNumber;
     @BindView(R.id.pswrdL) EditText mPassword;
-    @BindView(R.id.loginButton) Button mButton;
-    @BindView(R.id.registerTextView) TextView mRegister;
+    @BindView(R.id.lButton) Button mButton;
+    @BindView(R.id.signInTextView) TextView mRegister;
+    @BindView(R.id.forgotPassword) TextView mforgotPassword;
     AwesomeValidation awesomeValidation;
 
     @Override
@@ -31,20 +32,34 @@ public class log_in extends AppCompatActivity implements View.OnClickListener{
         awesomeValidation= new AwesomeValidation(ValidationStyle.BASIC);
 
         // add validation to identification number
-        awesomeValidation.addValidation(this,R.id.idno,"[5-9]{1}[0-9]{9}$",R.string.invalid_idno);
+        awesomeValidation.addValidation(this,R.id.userid,"[5-9]{1}[0-9]{9}$",R.string.invalid_idno);
 //        add validation to password
-        awesomeValidation.addValidation(this,R.id.userid,".{6,}",R.string.invalid_password);
+        awesomeValidation.addValidation(this,R.id.pswrdL,".{6,}",R.string.invalid_password);
     }
+
+
 
     @Override
     public void onClick(View v){
-        if(v == mRegister){
-
+        if(v == mforgotPassword){
+            Intent intent1 = new Intent(this,reset_password.class);
+            startActivity(intent1);
+        }
+        else if(v == mRegister){
             Intent intent = new Intent(this,sign_up.class);
             startActivity(intent);
+//            Intent intent = new Intent(this,sign_up.class);
+//            startActivity(intent);
         }else if(v == mButton){
+            if(awesomeValidation.validate()){
+                Toast.makeText(getApplicationContext(),"Form Validation succesfull",Toast.LENGTH_SHORT);
+            }else{
+                Toast.makeText(getApplicationContext(),"validation failed",Toast.LENGTH_SHORT).show();
+            }
 
 
+        }else {
+            Toast.makeText(getApplicationContext(),"fill the form",Toast.LENGTH_SHORT);
         }
 //        if(v == mLogInButton){
 //            String userName = mUserName.getText().toString();

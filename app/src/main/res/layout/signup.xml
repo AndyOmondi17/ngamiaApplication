@@ -71,7 +71,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_height="1dp"
-            android:background="@color/colorButton" />
+            android:background="@color/colorButton"/>
         <EditText
             android:textSize="16dp"
             android:id="@+id/pswrd"
@@ -114,11 +114,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColor="#000"
+            android:textColor="#9F6700"
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Already have an account? Log in here!"
-            android:id="@+id/loginTextView"
+            android:id="@+id/lTextView"
+            android:clickable="true"
+            android:onClick="onClick"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
