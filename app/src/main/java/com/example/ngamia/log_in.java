@@ -32,7 +32,7 @@ public class log_in extends AppCompatActivity implements View.OnClickListener{
         awesomeValidation= new AwesomeValidation(ValidationStyle.BASIC);
 
         // add validation to identification number
-        awesomeValidation.addValidation(this,R.id.userid,"[5-9]{1}[0-9]{9}$",R.string.invalid_idno);
+//        awesomeValidation.addValidation(this,R.id.userid,"[5-9]{1}[0-9]{9}$",R.string.invalid_idno);
 //        add validation to password
         awesomeValidation.addValidation(this,R.id.pswrdL,".{6,}",R.string.invalid_password);
     }
@@ -53,6 +53,8 @@ public class log_in extends AppCompatActivity implements View.OnClickListener{
         }else if(v == mButton){
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Validation succesfull",Toast.LENGTH_SHORT);
+                Intent intent = new Intent(this,rider_registration.class);
+                startActivity(intent);
             }else{
                 Toast.makeText(getApplicationContext(),"validation failed",Toast.LENGTH_SHORT).show();
             }
