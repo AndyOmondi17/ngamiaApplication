@@ -4,18 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
+    <ImageView
         android:layout_width="0dp"
+        android:layout_height="66dp"
         android:layout_weight="1"
-        android:layout_height="wrap_content"/>
+        android:id="@+id/img1"
+        android:scaleType="centerInside"
+        android:src="@drawable/sacco1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="67dp"
         android:layout_weight="1"
-        android:text="SaccoName"
-        android:padding="10dp"/>
-
+        android:padding="10dp"
+        android:text="SaccoName" />
 
 </LinearLayout>

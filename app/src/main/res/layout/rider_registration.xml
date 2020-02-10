@@ -5,6 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/DOB"
+            android:layout_width="227dp"
+            android:layout_height="57dp"
+            android:text="Select Date Of Birth"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +30,8 @@
             android:layout_width="96dp"
             android:layout_height="35dp"
             android:text="Nhif"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/nhifEditText"
@@ -42,7 +58,8 @@
             android:layout_width="96dp"
             android:layout_height="35dp"
             android:text="Nssf"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/nssfEditText"
@@ -62,14 +79,37 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/insurance"
-            android:layout_width="96dp"
-            android:layout_height="35dp"
-            android:text="Insurance"
-            android:textSize="20sp"/>
+            android:id="@+id/educationLevel"
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            android:text="Education Level"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <Spinner
-            android:id="@+id/insurancespinner"
+            android:id="@+id/educationlevelspinner"
+            android:layout_width="285dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/insurance"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/childrenNumber"
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            android:text="Number Of Children"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/childrenNumberspinner"
             android:layout_width="285dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -86,7 +126,8 @@
             android:layout_width="96dp"
             android:layout_height="35dp"
             android:text="Sacco"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <Spinner
             android:id="@+id/spinnerSacco"
@@ -96,4 +137,41 @@
             android:entries="@array/sacco"/>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/insurance"
+            android:layout_width="96dp"
+            android:layout_height="35dp"
+            android:text="Insurance"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/insurancespinner"
+            android:layout_width="285dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/insurance"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/colorButton"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="16dp"/>
 </LinearLayout>

@@ -49,14 +49,12 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         awesomeValidation.addValidation(this, R.id.idno, "[5-9]{1}[0-9]{9}$", R.string.invalid_idno);
 //        add validation to password
         awesomeValidation.addValidation(this, R.id.userid, ".{6,}", R.string.invalid_password);
-
-
     }
 
     @Override
     public void onClick(View v){
         if(v == mLogIn){
-            Intent intent = new Intent();
+            Intent intent = new Intent(this,rider_registration.class);
             startActivity(intent);
         }
     }
