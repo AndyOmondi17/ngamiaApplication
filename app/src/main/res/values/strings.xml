@@ -15,4 +15,22 @@
         <item>Sacco 1</item>
         <item>Sacco 2</item>
     </string-array>
+
+
+    <string-array name="education">
+        <item>Not Applicable</item>
+        <item>primary</item>
+        <item>secondary (O level)</item>
+        <item>Undergraduate</item>
+    </string-array>
+
+    <string-array name="childrenNumber">
+        <item>none</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>above 3</item>
+    </string-array>>
+
+
 </resources>

@@ -50,7 +50,7 @@ public class rider_registration extends AppCompatActivity implements View.OnClic
             }
         });
 
-        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        mDateSetListener = new DatePickerDialog.OnDateSetListener(){
             @Override
             public void onDateSet(DatePicker datePicker,int year,int month,int day){
                 month = month +1;

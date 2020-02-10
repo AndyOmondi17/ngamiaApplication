@@ -15,9 +15,7 @@
             android:layout_height="57dp"
             android:text="Select Date Of Birth"
             android:textSize="20sp"
-            android:textStyle="bold" />
-
-
+            android:textStyle="bold"/>
     </LinearLayout>
 
 
@@ -91,7 +89,7 @@
             android:layout_width="285dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:entries="@array/insurance"/>
+            android:entries="@array/education"/>
 
     </LinearLayout>
 
@@ -113,7 +111,7 @@
             android:layout_width="285dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:entries="@array/insurance"/>
+            android:entries="@array/childrenNumber"/>
 
     </LinearLayout>
 
