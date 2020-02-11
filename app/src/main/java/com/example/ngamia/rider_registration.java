@@ -58,13 +58,17 @@ public class rider_registration extends AppCompatActivity implements View.OnClic
                 mDisplayDate.setText(date);
             }
         };
-        Spinner insurance = findViewById(R.id.insurancespinner);
 
+        Spinner insurance = findViewById(R.id.insurancespinner);
         Spinner saccos = findViewById(R.id.spinnerSacco);
+        Spinner educationLevel = findViewById(R.id.educationlevelspinner);
+        Spinner childrenNumber = findViewById(R.id.childrenNumberspinner);
         String[] names = {"sacco1","sacco2"};
 
-        int[] images = {R.drawable.sacco1,R.drawable.sacco2};
+
         insurance.setOnItemSelectedListener(this);
+        educationLevel.setOnItemSelectedListener(this);
+        childrenNumber.setOnItemSelectedListener(this);
 
         saccos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
@@ -77,7 +81,7 @@ public class rider_registration extends AppCompatActivity implements View.OnClic
 
             }
         });
-        adapter = new CustomArrayAdapter(this,names,images);
+
 
 //        Spinner sacco = findViewById(R.id.spinnerSacco);
 //        sacco.setOnItemClickListener(this);
