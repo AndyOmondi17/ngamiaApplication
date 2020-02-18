@@ -45,13 +45,18 @@ public class log_in extends AppCompatActivity implements View.OnClickListener{
             startActivity(intent1);
         }
         else if(v == mRegister){
+//            Intent intent = new Intent(this,rider_registration.class);
+//            startActivity(intent);
             Intent intent = new Intent(this,sign_up.class);
             startActivity(intent);
-//            Intent intent = new Intent(this,sign_up.class);
-//            startActivity(intent);
         }else if(v == mButton){
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Validation succesfull",Toast.LENGTH_SHORT);
+//                Intent intent = new Intent(this,rider_registration.class);
+//                startActivity(intent);
+                Toast.makeText(log_in.this, "welcome ", Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(this,MainActivity.class);
+//                startActivity(intent);
                 Intent intent = new Intent(this,rider_registration.class);
                 startActivity(intent);
             }else{
