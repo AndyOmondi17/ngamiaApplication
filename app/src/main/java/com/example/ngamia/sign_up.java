@@ -56,7 +56,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
         ButterKnife.bind(this);
@@ -65,16 +65,23 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
 //        add validation to surname
-        awesomeValidation.addValidation(this, R.id.surname, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
+        awesomeValidation.addValidation(this, R.id.surname, RegexTemplate.NOT_EMPTY, R.string.empty_field);
+        awesomeValidation.addValidation(this,R.id.surname,"[^0-9]",R.string.wrong_input);
 //        add valdiation to firstname
-        awesomeValidation.addValidation(this, R.id.firstname, RegexTemplate.NOT_EMPTY, R.string.invalid_name);
+        awesomeValidation.addValidation(this, R.id.firstname, RegexTemplate.NOT_EMPTY, R.string.empty_field);
+                awesomeValidation.addValidation(this,R.id.firstname,"[^0-9]",R.string.wrong_input);
 
         progressDialog = new ProgressDialog(this);
 
         progressDialog.setMessage("Please wait.... ");
+
         // add validation to identification number
-        awesomeValidation.addValidation(this, R.id.idno, "[5-9]{1}[0-9]{9}$", R.string.invalid_idno);
+        awesomeValidation.addValidation(this, R.id.idno, ".{8,}", R.string.wrong_length);
+        awesomeValidation.addValidation(this,R.id.idno,RegexTemplate.NOT_EMPTY,R.string.empty_field);
+        awesomeValidation.addValidation(this,R.id.idno,"[^a-zA-Z]",R.string.input_wrong);
+
 //        add validation to password
+        awesomeValidation.addValidation(this,R.id.userid,RegexTemplate.NOT_EMPTY,R.string.empty_field);
         awesomeValidation.addValidation(this, R.id.userid, ".{6,}", R.string.invalid_password);
     }
 
