@@ -28,12 +28,14 @@ public class log_in extends AppCompatActivity implements View.OnClickListener{
         ButterKnife.bind(this);
         mButton.setOnClickListener(this);
         mRegister.setOnClickListener(this);
-        awesomeValidation= new AwesomeValidation(ValidationStyle.BASIC);
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         // add validation to identification number
 //        awesomeValidation.addValidation(this,R.id.userid,"[5-9]{1}[0-9]{9}$",R.string.invalid_idno);
 //        add validation to password
-        awesomeValidation.addValidation(this,R.id.pswrdL,".{6,}",R.string.invalid_password);
+//        awesomeValidation.addValidation(this,R.id.pswrdL,".{6,}",R.string.invalid_password);
+        awesomeValidation.addValidation(this,R.id.userid,".{8,}",R.string.wrong_length);
+
     }
 
 

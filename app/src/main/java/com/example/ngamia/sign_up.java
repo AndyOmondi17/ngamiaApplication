@@ -65,11 +65,12 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
 //        add validation to surname
-        awesomeValidation.addValidation(this, R.id.surname, RegexTemplate.NOT_EMPTY, R.string.empty_field);
-        awesomeValidation.addValidation(this,R.id.surname,"[^0-9]",R.string.wrong_input);
+        awesomeValidation.addValidation(this, R.id.surname, RegexTemplate.NOT_EMPTY, R.string.wrong_input);
+        awesomeValidation.addValidation(this,R.id.surname,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.wrong_input);
+
 //        add valdiation to firstname
-        awesomeValidation.addValidation(this, R.id.firstname, RegexTemplate.NOT_EMPTY, R.string.empty_field);
-                awesomeValidation.addValidation(this,R.id.firstname,"[^0-9]",R.string.wrong_input);
+        awesomeValidation.addValidation(this, R.id.firstname, RegexTemplate.NOT_EMPTY, R.string.wrong_input);
+        awesomeValidation.addValidation(this,R.id.firstname,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.wrong_input);
 
         progressDialog = new ProgressDialog(this);
 
@@ -78,11 +79,11 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         // add validation to identification number
         awesomeValidation.addValidation(this, R.id.idno, ".{8,}", R.string.wrong_length);
         awesomeValidation.addValidation(this,R.id.idno,RegexTemplate.NOT_EMPTY,R.string.empty_field);
-        awesomeValidation.addValidation(this,R.id.idno,"[^a-zA-Z]",R.string.input_wrong);
+//        awesomeValidation.addValidation(this,R.id.idno,"[0-9]",R.string.input_wrong);
 
 //        add validation to password
-        awesomeValidation.addValidation(this,R.id.userid,RegexTemplate.NOT_EMPTY,R.string.empty_field);
-        awesomeValidation.addValidation(this, R.id.userid, ".{6,}", R.string.invalid_password);
+        awesomeValidation.addValidation(this,R.id.pswrd,RegexTemplate.NOT_EMPTY,R.string.wrong_input);
+//        awesomeValidation.addValidation(this, R.id.pswrd, ".{6,}", R.string.invalid_password);
     }
 
 
@@ -90,7 +91,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         String Surname = mSurname.getText().toString().trim();
         String Firstname = mfirstName.getText().toString().trim();
         String password = mPassword.getText().toString().trim();
-        Integer IdNo = Integer.parseInt(mIdentificationNumber.getText().toString().trim());
+        int IdNo = Integer.parseInt(mIdentificationNumber.getText().toString().trim());
 
         apIinterface = APIclient.getApiClient().create(APIinterface.class);
         Call<User> call = apIinterface.saveUSer(Surname, Firstname, IdNo, password);
@@ -121,9 +122,15 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v){
         if(v == mSubmit) {
-            regiterUser();
+            if(awesomeValidation.validate()){
+                regiterUser();
+                Toast.makeText(getApplicationContext(),"Form Validate Succesful",Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(getApplicationContext(),"Form validation failed",Toast.LENGTH_SHORT).show();
+            }
+
         }else if (v == mLogIn){
             Intent intent = new Intent(this, log_in.class);
             startActivity(intent);

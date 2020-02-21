@@ -3,7 +3,12 @@ package com.example.ngamia;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.time.LocalDate;
+
+//Model class used by retrofit for sending and receiving requests
 public class User {
+
+    //the annotations are used by GSON(Google Gson) to perform serialisation an deserialisation
     @Expose
     @SerializedName("id") private  int id;
 
@@ -19,6 +24,20 @@ public class User {
 
     @Expose
     @SerializedName("password") private String Password;
+
+    @Expose
+    @SerializedName("NHIF_Number") private int NHIF_Number;
+
+
+
+    @Expose
+    @SerializedName("NSSF_Number") private int NSSF_Number;
+
+    @Expose
+    @SerializedName("Date_Of_Birth") private LocalDate Date_Of_Birth;
+
+    @Expose
+    @SerializedName("Gender") private String Gender;
 
     @Expose
     @SerializedName("success") private Boolean success;
@@ -41,6 +60,38 @@ public class User {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getNHIF_Number() {
+        return NHIF_Number;
+    }
+
+    public void setNHIF_Number(int NHIF_Number) {
+        this.NHIF_Number = NHIF_Number;
+    }
+
+    public int getNSSF_Number() {
+        return NSSF_Number;
+    }
+
+    public void setNSSF_Number(int NSSF_Number) {
+        this.NSSF_Number = NSSF_Number;
+    }
+
+    public LocalDate getDate_Of_Birth() {
+        return Date_Of_Birth;
+    }
+
+    public void setDate_Of_Birth(LocalDate date_Of_Birth) {
+        Date_Of_Birth = date_Of_Birth;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String gender) {
+        Gender = gender;
     }
 
 

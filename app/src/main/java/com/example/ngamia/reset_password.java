@@ -23,20 +23,20 @@ public class reset_password extends AppCompatActivity implements View.OnClickLis
     AwesomeValidation awesomevalidation;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reset_password);
         ButterKnife.bind(this);
         mButton.setOnClickListener(this);
 //        initialize validationsty;e
-//        awesomevalidation = new AwesomeValidation(ValidationStyle.BASIC);
+        awesomevalidation = new AwesomeValidation(ValidationStyle.BASIC);
 
 //        add validation for newpassword
 
-//        awesomeValidation.addValidation(this,R.id.userid,".{6,}",R.id.invalid_password);
-//        awesomevalidation.addValidation(this,R.id.lpswrd,".{6,}",R.string.invalid_password);
+        awesomevalidation.addValidation(this,R.id.userid,RegexTemplate.NOT_EMPTY,R.string.invalid_password);
+        awesomevalidation.addValidation(this,R.id.lpswrd,RegexTemplate.NOT_EMPTY,R.string.invalid_password);
 //        add validation for confirmpassword
-//        awesomevalidation.addValidation(this,R.id.cpswrd,R.id.lpswrd,R.string.invalid_confirmpassword);
+        awesomevalidation.addValidation(this,R.id.cpswrd,R.id.lpswrd,R.string.invalid_confirmpassword);
 
 
     }

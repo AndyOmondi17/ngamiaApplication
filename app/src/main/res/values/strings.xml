@@ -7,7 +7,7 @@
     <string name="invalid_name">Enter a valid name</string>
     <string name="empty_field">Kindly fill the field</string>
     <string name="wrong_length">Input the required length</string>
-    <string name="wrong_input">Name should contain only letters</string>
+    <string name="wrong_input">Invalid input</string>
     <string name="input_wrong">Id number should only contain digits</string>
 
 
